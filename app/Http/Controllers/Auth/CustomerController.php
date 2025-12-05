@@ -60,16 +60,21 @@ class CustomerController extends Controller
 
     public function getLoggedInCustomer(): JsonResponse
     {
-        $name = Auth::guard("customer")->user()->name;
-        $email = Auth::guard("customer")->user()->email;
+        if (Auth::guard("customer")->check()) {
+
+            return response()->json([
+                "success" => true,
+                "message" => [
+                    "name" => Auth::guard("customer")->user()->name,
+                    "email" => Auth::guard("customer")->user()->email,
+                ]
+            ], 200);
+        }
 
         return response()->json([
-            "success" => true,
-            "message" => [
-                "name" => $name,
-                "email" => $email,
-            ]
-        ], 200);
+            "success" => false,
+            "message" => "Please Login."
+        ]);
     }
 
     public function logout(Request $request): JsonResponse
