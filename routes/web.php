@@ -11,7 +11,7 @@ Route::post("/customer/login", [CustomerController::class, "login"])->name("cust
 
 Route::post("/customer/logout", [CustomerController::class, "logout"])->name("customer.logout")->middleware("auth:customer");
 
-Route::get('/customer', [CustomerController::class, "getLoggedInCustomer"])->middleware('auth:customer');
+Route::get('/customer', [CustomerController::class, "getLoggedInCustomer"]);
 
 Route::middleware('auth:customer')
     ->prefix("cart")
