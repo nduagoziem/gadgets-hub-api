@@ -16,13 +16,13 @@ return [
 
     'paths' => ['api/*', 'sanctum/csrf-cookie', "/customer", "/customer/*", "/cart/*"],
 
-    'allowed_methods' => ["GET", "POST", "PATCH"],
+    'allowed_methods' => ['*'],
 
     'allowed_origins' => [env("FRONTEND_URL",)],
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ["Content-Type", "X-XSRF-TOKEN"],
+    'allowed_headers' => ['*'],
 
     'exposed_headers' => [],
 
