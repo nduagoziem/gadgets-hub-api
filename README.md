@@ -1,6 +1,6 @@
 <h1 align="center">GADGETS HUB E-COMMERCE API</h1>
 
-A Demo API for a brand that deals on all kinds of gadgets. Built with the <strong>Laravel Framework.</strong>
+An API for a brand that deals on all kinds of gadgets. Built with the <strong>Laravel Framework.</strong>
 
 <h2 align="center">Table of Contents</h2>
 
