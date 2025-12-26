@@ -24,8 +24,6 @@ return [
 
     'allowed_headers' => ['*'],
 
-    'exposed_headers' => ['Set-Cookie'],
-
     'max_age' => 600,
 
     'supports_credentials' => true,
